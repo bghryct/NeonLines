@@ -23,10 +23,7 @@
 		const numLines = 30;
 		const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff', '#ffffff'];
 		
-		const offsetX = Math.random() * 10 - 5; // random value between -5 and 5
-		const offsetY = Math.random() * 10 - 5; // random value between -5 and 5
-		const x1 = canvas.width / 2 + Math.cos(angle) * 100 + offsetX;
-		const y1 = canvas.height / 2 + Math.sin(angle) * 100 + offsetY;
+
 		
 		// Define the vertices of the dodecahedron
 		const phi = (1 + Math.sqrt(5)) / 2;
@@ -101,6 +98,12 @@ context.stroke();
 		
 		// For each line, calculate its position and draw it
 		for (let i = 0; i < numLines; i++) {
+			
+			const offsetX = Math.random() * 10 - 5; // random value between -5 and 5
+			const offsetY = Math.random() * 10 - 5; // random value between -5 and 5
+			const x1 = canvas.width / 2 + Math.cos(angle) * 100 + offsetX;
+			const y1 = canvas.height / 2 + Math.sin(angle) * 100 + offsetY;
+			//delete if not working
 			const angle = i * Math.PI * 2 / numLines;
 			const x1 = canvas.width / 2 + Math.cos(angle) * 100;
 			const y1 = canvas.height / 2 + Math.sin(angle) * 100;
